@@ -47,7 +47,7 @@
 									select_category();
 								?>
 							</select>
-							
+
 							<!-- Sélection des Editeurs -->
 							<label>Editeur</label>
 							<select id="prod_editor" name="prod_editor" class="btn btn-default btn-sm">
@@ -57,7 +57,7 @@
 									select_editor();
 								?>
 							</select>
-							
+
 							<!-- Sélection de la tranche de Prix -->
 							<label>Prix</label>
 							<select id="prod_price" name="prod_price" class="btn btn-default btn-sm">

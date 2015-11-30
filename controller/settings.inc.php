@@ -13,14 +13,14 @@ define('_DB_PASSWD_', '');
 
 /* Sélectionner catégorie */
 define('_SL_CATEGORY_', 'SELECT
-							name_cat AS name
+							name_cat			AS name
 						FROM
 							gc_category'
 		);
-		
+
 /* Sélectionner éditeur */
 define('_SL_EDITOR_', 'SELECT
-							name_editor AS name
+							name_editor			AS name
 						FROM
 							gc_editor'
 		);
@@ -30,7 +30,7 @@ define('_SC_PRODUCTS_', 'SELECT *
 						FROM
 							gc_games'
 		);
-		
+
 /* Afficher produits par catégorie */
 define('_SC_CATEGORY_', 'SELECT *
 						FROM
@@ -42,7 +42,7 @@ define('_SC_CATEGORY_', 'SELECT *
 						AND
 							gc_category.name_cat	= :r_cat'
 		);
-		
+
 /* Afficher produits par éditeur */
 define('_SC_EDITOR_', 'SELECT *
 						FROM
@@ -54,25 +54,25 @@ define('_SC_EDITOR_', 'SELECT *
 						AND
 							gc_editor.name_editor	= :r_editor'
 		);
-		
+
 /* Afficher produits par prix croissant */
 define('_SC_ASC_PRICE_', 'SELECT *
-						FROM 
+						FROM
 							gc_games
 						ORDER BY
 							price
 						ASC'
 		);
-		
+
 /* Afficher produits par prix décroissant */
 define('_SC_DESC_PRICE_', 'SELECT *
-						FROM 
+						FROM
 							gc_games
 						ORDER BY
 							price
 						DESC'
 		);
-		
+
 /* Inscription utilisateur */
 define('_DB_SIGNUP_', 'INSERT INTO gc_customers (firstname_customer,
 													lastname_customer,
@@ -95,7 +95,7 @@ define('_DB_SIGNUP_', 'INSERT INTO gc_customers (firstname_customer,
 								:r_address,
 								:r_postal)'
 	);
-	
+
 /* Modification informations utilisateur */
 define('_DB_UPDATE_', 'UPDATE gc_customers
 						SET
@@ -108,6 +108,27 @@ define('_DB_UPDATE_', 'UPDATE gc_customers
 							postal_code			=	:r_postal_code
 						WHERE
 							id_customer			=	:r_customer'
+		);
+
+/* Selection de tout les jeux présents dans la table gc_games */
+define('_GC_GAMES_', 'SELECT
+						id_game				AS id,
+						name_game			AS name,
+						description_game	AS description,
+						price				AS price,
+						image				AS src,
+						game_console		AS console,
+						release_date		AS released_on
+					FROM
+						gc_games'
+		);
+
+define('_DB_SELECT_ID_GAME_', 'SELECT
+									id_game	AS id
+								FROM
+									gc_games
+								WHERE
+									id_game		= :id'
 		);
 
 /*

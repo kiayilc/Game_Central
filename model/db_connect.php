@@ -1,6 +1,8 @@
-<!-- Connexion à la base de données -->
 <?php
-function	db_connect($host, $usr, $pwd, $db_name)
+
+/*Connexion à la base de données*/
+
+function	db_connect($host = _DB_SERVER_, $usr = _DB_USER_, $pwd = _DB_PASSWD_, $db_name = _DB_NAME_)
 {
 	try
 	{

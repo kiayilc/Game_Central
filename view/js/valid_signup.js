@@ -23,12 +23,12 @@ $(document).ready(function(){
 			$("input[name=firstname]").css("border-color" , "#4CAE4C");
 	});
 	
-	$("input[name=city]").change(function(){
+	$("input[name=Ville]").change(function(){
 		var regex = /^[a-zA-Z- \'çüéâäàêëèïîôöûùÿ]+$/g;
 		if (regex.test(this.value) == false)
-			$("input[name=city]").css("border-color" , "#D43F3A");
+			$("input[name=Ville]").css("border-color" , "#D43F3A");
 		else
-			$("input[name=city]").css("border-color" , "#4CAE4C");
+			$("input[name=Ville]").css("border-color" , "#4CAE4C");
 	});
 	
 	$("input[name=phone]").change(function(){
@@ -70,39 +70,5 @@ $(document).ready(function(){
 			$("input[name=birthday]").css("border-color" , "#D43F3A");
 		else
 			$("input[name=birthday]").css("border-color" , "#4CAE4C");
-	});
-	
-	$("input[name=card_type]").change(function(){
-		var regex = /^[a-zA-Z- \'çüéâäàêëèïîôöûùÿ]+$/g;
-		if (regex.test(this.value) == false)
-			$("input[name=card_type]").css("border-color" , "#D43F3A");
-		else
-			$("input[name=card_type]").css("border-color" , "#4CAE4C");
-	});
-	
-	$("input[name=card_number]").change(function(){
-		var regex = /^[0-9]{13}$/g;
-		if (regex.test(this.value) == false)
-			$("input[name=card_number]").css("border-color" , "#D43F3A");
-		else
-			$("input[name=card_number]").css("border-color" , "#4CAE4C");
-	});
-	
-	$("input[name=cryptogram]").change(function(){
-		var regex = /^[0-9]{3}$/g;
-		if (regex.test(this.value) == false)
-			$("input[name=cryptogram]").css("border-color" , "#D43F3A");
-		else
-			$("input[name=cryptogram]").css("border-color" , "#4CAE4C");
-	});
-	
-	$("input[name=expiring_date]").change(function(){
-		var date = new Date();
-		var tab = this.value.split("-");
-		var expiration = new Date(tab[1], tab[0]);
-		if (expiration < date)
-			$("input[name=expiring_date]").css("border-color" , "#D43F3A");
-		else
-			$("input[name=expiring_date]").css("border-color" , "#4CAE4C");
 	});
 });
