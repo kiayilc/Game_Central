@@ -43,7 +43,7 @@
 										<span class="item-left">
 											<img src="<?= $order->image ?>" alt="" style="width: 20px; height: 20px;">
 											<span class="item-info">
-												<span><?= $_SESSION['cart'][$order->name_game]; ?> - </span>
+												<span><?= $order->name_game; ?> - </span>
 												<span><?= number_format($order->price, 2, ',', ' ')?> €</span>
 											</span>
 										</span>
